@@ -1,0 +1,15 @@
+[
+    {
+        "name": "sample",
+        "ingredients": [
+            {
+                "name": "sugar",
+                "available_unit": "kg",
+                "available_qty": 20,
+                "required_unit": "kg",
+                "required_per_unit": 0.5,
+                "cost_per_unit": 20
+            }
+        ]
+    }
+]
