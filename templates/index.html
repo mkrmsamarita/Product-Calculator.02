@@ -163,8 +163,8 @@
 
             if (response.ok) {
                 alert('Ingredients saved successfully!');
-                loadSavedLists(); // Refresh the dropdown
-                document.getElementById('save_name').value = ''; // Clear input after saving
+                loadSavedLists(); 
+                document.getElementById('save_name').value = ''; 
             } else {
                 alert('Failed to save ingredients.');
             }
@@ -195,7 +195,7 @@
             if (response.ok) {
                 const loadedIngredients = await response.json();
                 const ingredientListDiv = document.getElementById('ingredient-list');
-                ingredientListDiv.innerHTML = ''; // Clear existing ingredients
+                ingredientListDiv.innerHTML = ''; 
 
                 loadedIngredients.forEach(ing => {
                     const ingredientDiv = document.createElement("div");
@@ -255,15 +255,14 @@
 
             if (response.ok) {
                 alert('List removed successfully!');
-                loadSavedLists(); // Refresh the dropdown
-                document.getElementById('load_list').value = ''; // Clear selection
-                document.getElementById('ingredient-list').innerHTML = ''; // Clear the ingredient list
+                loadSavedLists(); 
+                document.getElementById('load_list').value = ''; 
+                document.getElementById('ingredient-list').innerHTML = ''; 
             } else {
                 alert('Failed to remove list.');
             }
         }
 
-        // Load saved lists when the page loads
         window.onload = loadSavedLists;
     </script>
 </body>

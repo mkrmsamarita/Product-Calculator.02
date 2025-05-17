@@ -217,7 +217,7 @@ def export_pdf():
 
     frame_width = letter[0] - 200
     available_height = letter[1] - y_position - 100
-    frame = Frame(100, y_position, frame_width, available_height, showBoundary=0)
+    frame = Frame(100, y_position - 100, frame_width, available_height, showBoundary=0)
 
     table = Table(data)
     table.setStyle(TableStyle([
